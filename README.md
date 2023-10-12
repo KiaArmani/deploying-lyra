@@ -2,21 +2,21 @@
 A repository containing various useful resources around deploying Lyra to players.
 
 # Game Repository Structure
-├── Binaries
-│   ├── GameServer
-│   │   ├── Dockerfile
-│   │   ├── LinuxServer
-│   │   │   ├── LyraServer
-│   ├── GameClient
-│   │   ├── Windows
-│   │   ├── Linux
-├── Lyra
-│   ├── Plugins
-│   │   ├── OnlineSubsystemRedpointEOS
-│   │   ├── OnlineSubsystemBlueprints
-│   │   ├── Matchmaking
-│   │   ├── GameManagementFramework
-└──
+    ├── Binaries
+    │   ├── GameServer
+    │   │   ├── Dockerfile
+    │   │   ├── LinuxServer
+    │   │   │   ├── LyraServer
+    │   ├── GameClient
+    │   │   ├── Windows
+    │   │   ├── Linux
+    ├── Lyra
+    │   ├── Plugins
+    │   │   ├── OnlineSubsystemRedpointEOS
+    │   │   ├── OnlineSubsystemBlueprints
+    │   │   ├── Matchmaking
+    │   │   ├── GameManagementFramework
+    └──
 
 # Locally Building Lyra
 
