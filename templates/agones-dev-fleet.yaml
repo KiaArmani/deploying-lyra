@@ -1,0 +1,39 @@
+apiVersion: "agones.dev/v1"
+kind: Fleet
+metadata:
+  # Change this as appropriate. If you roll out a fleet with the same name, it will
+  # upgrade the existing fleet. If you want to run multiple versions side-by-side, use
+  # a unique name for each version.
+  name: fleet-dev
+spec:
+  # The number of replicas by default. This isn't super important, as we'll control
+  # this with the autoscaler in a moment anyway.
+  replicas: 3
+  template:
+    spec:
+      # Set up your game ports as appropriate.
+      ports:
+      - name: game
+        containerPort: 7777
+      - name: beacon
+        containerPort: 9990
+      template:
+        spec:
+          # Don't forget to use your pull secret.
+          imagePullSecrets:
+          - name: my-registry-secret
+          containers:
+          - name: lyra
+            # Update the image to the URL you pushed your packaged game server to.
+            image: lyra/server:latest
+            resources:
+              requests:
+                # Adjust these values for your game server.
+                # 1GB of RAM
+                memory: "300Mi"
+                # 1.5 vCPU
+                cpu: "250m"
+              limits:
+                # These should be the same settings as requests.
+                memory: "300Mi"
+                cpu: "250m"

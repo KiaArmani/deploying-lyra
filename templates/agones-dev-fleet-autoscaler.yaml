@@ -1,0 +1,19 @@
+apiVersion: "autoscaling.agones.dev/v1"
+kind: FleetAutoscaler
+metadata:
+  name: autoscaler-dev
+spec:
+  fleetName: fleet-dev
+  policy:
+    type: Buffer
+    buffer:
+      # The number of game servers to keep available at all times. The autoscaler will
+      # create or remove game servers as appropriate to keep this buffer.
+      bufferSize: 2
+      # The minimum number of game servers to run at any given time.
+      minReplicas: 2
+      # The maximum number of game servers to run at any given time. You can usually set
+      # this to a significantly large value, as capacity will be limited by the number
+      # of Kubernetes machines you have. However, if you're bursting into cloud, you
+      # might want to limit this to prevent cost overruns.
+      maxReplicas: 2000
