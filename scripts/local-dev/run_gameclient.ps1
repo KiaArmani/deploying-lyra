@@ -1,0 +1,4 @@
+$PROJECT_ROOT = $ENV:PROJECT_ROOT
+$OUTPUT_ROOT = "$PROJECT_ROOT\Binaries\GameClient\"
+
+& $OUTPUT_ROOT/Windows/LyraGame.exe
