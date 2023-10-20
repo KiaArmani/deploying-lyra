@@ -24,7 +24,7 @@ spec:
           containers:
           - name: lyra
             # Update the image to the URL you pushed your packaged game server to.
-            image: registry.local.kia.dev/lyra/server:dev
+            image: registry/lyra/server:dev
             args: ["L_Expanse", "-Experience=B_ShooterGame_Elimination"]
             resources:
               requests:
