@@ -221,7 +221,7 @@ Here a few useful commands to use while SSH'd into your master VM:
 ```
 kubectl delete fleetautoscaler --all
 kubectl delete fleet --all
-kubectl delete gameserver --all`
+kubectl delete gameserver --all
 ```
 
 
