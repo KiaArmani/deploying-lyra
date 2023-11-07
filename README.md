@@ -218,9 +218,12 @@ Here a few useful commands to use while SSH'd into your master VM:
 
 ### Delete all gameservers and scalers
 
-``kubectl delete gameserver --all``
-``kubectl delete fleet --all``
-``kubectl delete fleetautoscaler --all``
+```
+kubectl delete fleetautoscaler --all
+kubectl delete fleet --all
+kubectl delete gameserver --all`
+```
+
 
 ### Get status of all gameservers
 
